@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tums Counter</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        h1, p {
+            margin: 10px;
+        }
+        #result {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+        button {
+            font-size: 18px;
+            padding: 12px 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 25px;
+            background-color: #007BFF;
+            color: white;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click here to see how many Tums Kara has eaten in the past 24 hours‼️‼️‼️</h1>
+    <p>(It might be more than you think!!)</p>
+    <button onclick="showTumsCount()" id="tums">Click Here</button>
+    <p id="result">16</p>
+    
+    <script>
+        function showTumsCount() {
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('tums').style.display = 'none';
+            confetti();
+        }
+    </script>
+</body>
+</html>
